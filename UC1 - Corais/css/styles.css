@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #00071D;
+}
+
+.container-titulos {
+    text-align: center;
+    padding: 0 30px;
+}
+
+.titulo-seção {
+    margin-top: 10px;
+    font-size: 34px;
+    color: #fff;
+
+    @media (width >=768px) {
+        font-size: 40px;
+    }
+}
+
+/* cabeçalho */
+
+.container-cabeçalho {
+    position: relative;
+    overflow: hidden;
+}
+
+.cabeçalho {
+    background-color: rgba(0, 0, 0, .40);
+    position: absolute;
+    width: 100%;
+}
+
+.cabeçalho-logo {
+    height: 50px;
+}
+
+.cabeçalho-logo img {
+    width: 120px;
+    position: relative;
+    bottom: 35px;
+    z-index: 10;
+}
+
+.limite-cabeçalho {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1480px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.nav-lista {
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+    display: none;
+
+    @media (width >=768px) {
+        display: flex;
+    }
+}
+
+.nav-item {
+    z-index: 10;
+    cursor: pointer;
+
+    a {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        transition: all .3s;
+        position: relative;
+        z-index: 10;
+
+        &:hover {
+            color: #b9c8e4;
+        }
+    }
+}
+
+.container-video {
+    height: 90vh;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        display: none;
+
+        @media (width >=768px) {
+            display: block;
+        }
+    }
+
+    video {
+        overflow: hidden;
+        display: none;
+
+        @media (width >=768px) {
+            display: block;
+            width: 180%;
+        }
+    }
+
+    .container-image {
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            top: 0;
+        }
+
+        img {
+            width: 300%;
+        }
+
+        @media (width >=768px) {
+            display: none;
+        }
+    }
+
+    .container-texts {
+        position: absolute;
+        top: 42%;
+        left: 10%;
+        color: white;
+        z-index: 10;
+
+        @media (width >=1920px) {
+            left: 15%;
+        }
+    }
+
+    .container-texts h1 {
+        font-size: 50px;
+        max-width: 30rem;
+        line-height: 55px;
+
+        @media (width >=768px) {
+            font-size: 60px;
+            max-width: 35rem;
+            line-height: 70px;
+        }
+
+        @media (width >=1920px) {
+            font-size: 80px;
+            max-width: 50rem;
+            line-height: 85px;
+        }
+    }
+
+    .container-texts p {
+        margin-top: 25px;
+        font-size: 16px;
+        max-width: 25rem;
+        line-height: 26px;
+
+        @media (width >=1920px) {
+            font-size: 18px;
+            line-height: 29px;
+        }
+    }
+}
+
+
+/* benefícios */
+
+.beneficios {
+    max-width: 1080px;
+    margin: 100px auto 0;
+    /* background-color: red; */
+
+    #container_corais {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+        margin-top: 70px;
+        color: white;
+    }
+
+    .caixa {
+        position: relative;
+        width: 100%;
+        height: 270px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .caixa img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .caixa p {
+        margin-top: 20px;
+        font-size: 14px;
+        text-align: center;
+        line-height: 22px;
+        color: #e4e4e4;
+    }
+
+    .caixa h3 {
+        margin-top: 10px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .caixa .button-continuar-lendo {
+        margin-top: 20px;
+        border: none;
+        cursor: pointer;
+        background-color: #384861;
+        text-decoration: none;
+        font-size: 16px;
+        text-align: center;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+
+    }
+
+    .caixa a:hover {
+        background-color: #151d2c;
+        transition: 0.5s all;
+    }
+
+    @keyframes zoom {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .caixa img {
+        animation: zoom 3s ease-in-out infinite;
+    }
+
+    dialog::backdrop {
+        background-color: rgba(0, 0, 0, 0.562);
+    }
+
+    /*--------------------------------------------------------------------------- MODAL 1 --------------------------------------*/
+
+    #modal {
+        position: absolute;
+        border: none;
+        font-size: 25px;
+        max-width: 700px;
+        height: 490px;
+        top: 650px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #151d2c;
+        padding: 30px;
+        border-radius: 20px;
+
+        h1 {
+            color: #fff;
+        }
+    }
+
+    #modal:hover {
+        border-radius: 20px;
+    }
+
+    .botao_close {
+        margin-top: 20px;
+        width: 80px;
+        height: 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #000b31;
+        color: #fff;
+        border: none;
+        transition: 0.5s all;
+    }
+
+    .botao_close:hover {
+        background-color: #00071da9;
+    }
+
+    #modal p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 26px;
+        color: #cfcfcf;
+    }
+
+    /*--------------------------------------------------------------------------- MODAL 2 --------------------------------------*/
+
+
+    #modal2 {
+        position: absolute;
+        border: none;
+        font-size: 25px;
+        max-width: 700px;
+        height: 470px;
+        top: 650px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #151d2c;
+        padding: 30px;
+        border-radius: 20px;
+
+
+        h1 {
+            color: #fff;
+        }
+    }
+
+    #modal2:hover {
+        border-radius: 20px;
+        /*bordas arredondadas*/
+    }
+
+
+    #modal2 p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 26px;
+        color: #cfcfcf;
+    }
+
+    /*--------------------------------------------------------------------------- MODAL 3 --------------------------------------*/
+
+
+    #modal3 {
+        position: absolute;
+        border: none;
+        font-size: 25px;
+        max-width: 700px;
+        height: 490px;
+        top: 650px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        background-color: #151d2c;
+        padding: 30px;
+        border-radius: 20px;
+
+        h1 {
+            color: #fff;
+        }
+    }
+
+    #modal3:hover {
+        border-radius: 20px;
+    }
+
+    #modal3 p {
+        font-size: 16px;
+        text-align: left;
+        line-height: 26px;
+        color: #cfcfcf;
+    }
+}
+
+/* curiosidades */
+
+.curiosidades {
+    margin-top: 150px;
+    background-color: #0F162B;
+    padding: 80px 0;
+
+    h2 {
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+    }
+
+    .curiosidade-video {
+        text-align: center;
+    }
+
+    video {
+        width: 100%;
+        max-width: 800px;
+        margin: 50px auto 0;
+    }
+}
+
+
+/* extinção */
+
+.extincao {
+    padding: 80px 20px;
+    background-color: #0F162B;
+    color: #fff;
+}
+
+#headerextincao {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#headerextincao h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#headerextincao p {
+    font-size: 18px;
+    color: #cfcfcf;
+}
+
+.extincao-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.extincao-card {
+    background-color: #1C2239;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.extincao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.extincao-icon img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.extincao-content h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.extincao-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.extincao-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.button-saiba-mais {
+    background-color: #384861;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-saiba-mais:hover {
+    background-color: #151d2c;
+}
+
+
+/* Estilo do Modal */
+#modal1 {
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #1C2239; /* Cor de fundo escura, alinhada ao tema do site */
+    color: #fff; /* Texto branco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar o modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Título do Modal */
+#modal1 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* Título branco */
+    text-align: center;
+}
+
+/* Texto do Modal */
+#modal1 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf; /* Texto cinza claro para melhor contraste */
+    margin-bottom: 25px;
+}
+
+/* Botão de Fechar */
+#modal1 .modal-close {
+    background-color: #384861; /* Cor do botão */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+#modal1 .modal-close:hover {
+    background-color: #151d2c; /* Cor do botão ao passar o mouse */
+}
+
+/* Fundo Escurecido (Backdrop) */
+#modal1::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido para destacar o modal */
+}
+
+/* Estilo do Modal */
+#modal4 {
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #1C2239; /* Cor de fundo escura, alinhada ao tema do site */
+    color: #fff; /* Texto branco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar o modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Título do Modal */
+#modal4 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* Título branco */
+    text-align: center;
+}
+
+/* Texto do Modal */
+#modal4 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf; /* Texto cinza claro para melhor contraste */
+    margin-bottom: 25px;
+}
+
+/* Botão de Fechar */
+#modal4 .modal-close {
+    background-color: #384861; /* Cor do botão */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+#modal4 .modal-close:hover {
+    background-color: #151d2c; /* Cor do botão ao passar o mouse */
+}
+
+/* Fundo Escurecido (Backdrop) */
+#modal2::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido para destacar o modal */
+}
+
+
+#modal5 {
+    border: none;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 600px;
+    background-color: #1C2239; /* Cor de fundo escura, alinhada ao tema do site */
+    color: #fff; /* Texto branco */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar o modal */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+/* Título do Modal */
+#modal5 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff; /* Título branco */
+    text-align: center;
+}
+
+/* Texto do Modal */
+#modal5 p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #cfcfcf; /* Texto cinza claro para melhor contraste */
+    margin-bottom: 25px;
+}
+
+/* Botão de Fechar */
+#modal5 .modal-close {
+    background-color: #384861; /* Cor do botão */
+    color: #fff; /* Texto branco */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto; /* Centraliza o botão */
+}
+
+#modal5 .modal-close:hover {
+    background-color: #151d2c; /* Cor do botão ao passar o mouse */
+}
+
+/* Fundo Escurecido (Backdrop) */
+#modal5::backdrop {
+    background-color: rgba(0, 0, 0, 0.7); /* Fundo escurecido para destacar o modal */
+}
+
+/* tipos de corais */
+
+.tipos-corais {
+    margin-top: 150px;
+
+    .swiper {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: linear-gradient(#00071D);
+        background-color: #00071D;
+    }
+
+    .card-local {
+        margin: 0 60px 35px;
+        padding: 20px 10px;
+        overflow: hidden;
+    }
+
+    .card-lista .card-item {
+        list-style: none;
+    }
+
+    .card-lista .card-item .card-link {
+        user-select: none;
+        display: block;
+        background: #1C2239;
+        padding: 18px;
+        border-radius: 12px;
+        text-decoration: none;
+        height: 500px;
+    }
+
+    .card-lista .card-link .card-imagem {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card-lista .card-link .card-titulo {
+        font-weight: 500;
+        margin: 20px 0 8px;
+        font-size: 28px;
+        color: #fff;
+    }
+
+    .card-lista .card-link .card-texto {
+        font-size: 14px;
+        color: #cfcfcf;
+        font-weight: 400;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+
+    .swiper-wrapper .swiper-pagination-bullet {
+        height: 13px;
+        width: 13px;
+        opacity: 0.5;
+    }
+
+    .swiper-pagination-bullet-active-next {
+        background-color: #fff !important;
+    }
+
+    .swiper-wrapper .swiper-pagination-bullet-active {
+        opacity: 1;
+    }
+
+    .swiper-wrapper .swiper-slide-button {
+        color: #5372F0;
+        margin-top: -35px;
+    }
+
+    @media (max-width: 768px) {
+        .card-wrapper {
+            margin: 0 10px 25px;
+        }
+
+        .card-wrapper .swiper-slide-button {
+            display: none;
+        }
+    }
+}
+
+
+/* ongs */
+
+.ongs {
+    margin-top: 150px;
+    background-color: #0F162B;
+    padding: 50px 60px;
+
+    .title {
+        text-align: center;
+
+        h2 {
+            font-size: 34px;
+            color: #fff;
+        }
+    }
+
+    .ongs-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ong-img {
+        background-color: #1b1f36;
+        border-radius: 15px 15px 0 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        div  {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex: 1;
+        }
+
+        div .titulo-logos {
+            margin-top: 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        img {
+            width: 90px;
+        }
+
+        a {
+            text-decoration: none;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: #384861;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 5px;
+        }
+    }
+
+    .ong-text {
+        background-color: #00071D;
+        border-radius: 0 0 15px 15px;
+        padding: 30px;
+        color: #fff;
+        flex: 1;
+
+        p {
+            line-height: 26px;
+        }
+    }
+
+    .container-grids {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 50px;
+    }
+
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #0F162B; /* Cor de fundo escura */
+    padding: 40px 20px;
+    color: #fff;
+    border-top: 1px solid #384861; /* Linha superior para separar o conteúdo */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #cfcfcf; /* Texto cinza claro */
+    margin: 0;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #b9c8e4; /* Cor ao passar o mouse */
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer-social a:hover img {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        padding: 0;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

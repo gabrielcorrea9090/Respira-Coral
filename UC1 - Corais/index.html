@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <script src="js/ex.js" defer></script>
+    <title>Respira Corais</title>
+</head>
+
+<body>
+    <div class="container-cabeçalho">
+        <header class="cabeçalho">
+            <div class="limite-cabeçalho">
+                <div class="cabeçalho-logo">
+                    <img src="images/logo-3.png" alt="logo Respira Coral">
+                </div>
+
+                <nav>
+                    <ul class="nav-lista">
+                        <li class="nav-item">
+                            <a href="#beneficios">
+                                Benefícios
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#curiosidades">
+                                Curiosidades
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#extincaofundo">
+                                Extinção
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#tipos-de-corais">
+                                Tipos de corais
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ongs">
+                                ONGs
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container-video">
+            <video autoplay loop muted>
+                <source src="videos/coral-header.mp4">
+            </video>
+
+            <div class="container-image">
+                <img src="images/coral-header.jpg" alt="">
+            </div>
+
+            <div class="container-texts">
+                <h1>O Último Suspiro dos <span>Corais</span></h1>
+                <p>Imagine Um Mundo Sem Peixes, Sem Praias e Sem Mar Azul… Isso Já Está Acontecendo</p>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="beneficios" id="beneficios">
+            <div class="container-titulos">
+                <h2 class="titulo-seção">Benefícios dos corais</h2>
+            </div>
+
+            <div id="container_corais">
+                <div class="caixa">
+                    <img src="images/icone_coral.png">
+
+                    <h3>Biodiversidade</h3>
+
+                    <p>Os corais abrigam uma incrível diversidade de vida marinha, servindo como refúgio e local de
+                        reprodução para diversas espécies, contribuindo para o equilíbrio dos ecossistemas oceânicos.
+                    </p>
+
+                    <button class="button-continuar-lendo" id="open_modal">Continuar lendo</button>
+
+                    <dialog id="modal">
+                        <h1>Biodiversidade</h1>
+                        <p>A biodiversidade dos corais é incrível e vital para os ecossistemas marinhos. Os recifes de
+                            corais, muitas vezes chamados de "florestas tropicais do mar", abrigam uma diversidade
+                            impressionante de vida marinha, incluindo peixes, moluscos, crustáceos, e invertebrados.
+                            Esses ecossistemas fornecem abrigo, alimento e locais de reprodução para milhares de
+                            espécies, muitas das quais são endêmicas, ou seja, só existem nesses ambientes específicos.
+                            Além disso, os corais desempenham um papel crucial na proteção das costas, ajudando a
+                            prevenir a erosão e a diminuir o impacto das ondas fortes. No entanto, os recifes de corais
+                            estão ameaçados por mudanças climáticas, poluição e práticas de pesca destrutivas, o que põe
+                            em risco a rica biodiversidade que eles sustentam. A conservação dos corais é, portanto,
+                            essencial para manter a saúde dos oceanos e a vida marinha globalmente.
+                        </p>
+
+                        <button class="botao_close" id="botao_close">OK</button>
+                    </dialog>
+
+                    <script>
+                        const open_modal = document.querySelector("#open_modal")
+                        const modal = document.querySelector("#modal")
+                        const botao_close = document.querySelector("#botao_close")
+
+
+                        open_modal.onclick = function () {
+                            modal.showModal()
+                        }
+
+                        botao_close.onclick = function () {
+                            modal.close()
+                        }
+                    </script>
+
+                </div>
+                <div class="caixa">
+                    <img src="images/icone_onda.png">
+
+                    <h3>Proteção costeira</h3>
+
+                    <p>Os recifes de coral funcionam como barreiras naturais, reduzindo a erosão e protegendo as costas
+                        contra tempestades e tsunamis, beneficiando comunidades litorâneas.</p>
+
+                    <button class="button-continuar-lendo" id="open_modal2">Continuar lendo</button>
+
+                    <dialog id="modal2">
+                        <h1>Proteção costeira</h1>
+                        <p>A proteção costeira proporcionada pelos recifes de corais é fundamental para a preservação
+                            das zonas litorâneas. Os recifes atuam como uma barreira natural, absorvendo a energia das
+                            ondas e reduzindo a força das marés, o que ajuda a prevenir a erosão das praias e danos à
+                            infraestrutura costeira. Além disso, eles protegem os habitats terrestres e marinhos,
+                            contribuindo para a estabilidade do ecossistema local. A presença dos corais também diminui
+                            o impacto de tempestades e tsunamis, oferecendo um escudo natural contra desastres naturais.
+                            Contudo, a degradação dos recifes devido a fatores como o aquecimento global e a poluição
+                            ameaça essa função protetora. A conservação dos corais é essencial para garantir a segurança
+                            e sustentabilidade das áreas costeiras.
+                        </p>
+
+                        <button class="botao_close" id="botao_close2">OK</button>
+                    </dialog>
+
+                    <script>
+                        const open_modal2 = document.querySelector("#open_modal2")
+                        const modal2 = document.querySelector("#modal2")
+                        const botao_close2 = document.querySelector("#botao_close2")
+
+
+                        open_modal2.onclick = function () {
+                            modal2.showModal()
+                        }
+
+                        botao_close2.onclick = function () {
+                            modal2.close()
+                        }
+                    </script>
+                </div>
+
+                <div class="caixa">
+                    <img src="images/icone_dinhero.png">
+
+                    <h3>Econômicos e Sociais</h3>
+
+                    <p>Os corais sustentam a pesca e o turismo, gerando emprego e renda. Também são fonte de pesquisa
+                        científica e medicamentos, beneficiando comunidades locais e globais.</p>
+
+                    <button class="button-continuar-lendo" id="open_modal3">Continuar lendo</button>
+
+                    <dialog id="modal3">
+                        <h1>Econômicos e Sociais</h1>
+                        <p>Os recifes de corais desempenham um papel crucial nas economias costeiras e nas comunidades
+                            locais. Eles sustentam atividades econômicas importantes, como o turismo, que gera bilhões
+                            de dólares anuais ao atrair turistas interessados em mergulhar e apreciar a vida marinha.
+                            Além disso, os recifes são essenciais para a pesca, fornecendo um habitat vital para várias
+                            espécies de peixe que são fontes importantes de alimento e renda para muitas comunidades
+                            pesqueiras. Socialmente, os corais têm grande valor cultural para as populações costeiras,
+                            sendo muitas vezes ligados a práticas tradicionais e à identidade local. No entanto, a
+                            degradação dos recifes pode afetar diretamente essas economias, diminuindo a biodiversidade
+                            e prejudicando o turismo e a pesca, o que torna a preservação dos corais uma questão vital
+                            para a sustentabilidade econômica e social dessas regiões.
+                        </p>
+
+                        <button class="botao_close" id="botao_close3">OK</button>
+                    </dialog>
+
+                    <script>
+                        const open_modal3 = document.querySelector("#open_modal3")
+                        const modal3 = document.querySelector("#modal3")
+                        const botao_close3 = document.querySelector("#botao_close3")
+
+                        open_modal3.onclick = function () {
+                            modal3.showModal()
+                        }
+
+                        botao_close3.onclick = function () {
+                            modal3.close()
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+
+        <section class="curiosidades" id="curiosidades">
+            <h2>Vamos conhecer um pouco dos corais?</h2>
+
+            <div class="curiosidade-video">
+                <video controls autoplay src="videos/Corais_2.mp4"></video>
+            </div>
+        </section>
+
+        <section class="extincao" id="extincaofundo">
+            <header id="headerextincao">
+                <h2>Causas da Extinção dos Recifes de Corais</h2>
+                <p>Entenda os principais fatores que ameaçam os recifes de corais e como isso impacta o ecossistema marinho.</p>
+            </header>
+
+            <div class="extincao-grid">
+                <!-- Card 1: Aquecimento Global -->
+                <div class="extincao-card">
+                    <div class="extincao-icon">
+                        <img src="images/globo.png" alt="Aquecimento Global">
+                    </div>
+                    <div class="extincao-content">
+                        <h3>Aquecimento Global</h3>
+                        <ul>
+                            <li>Aumento da temperatura dos oceanos.</li>
+                            <li>Branqueamento dos corais.</li>
+                            <li>Perda de biodiversidade.</li>
+                        </ul>
+                        <button class="button-saiba-mais" data-modal="modal1">Saiba Mais</button>
+                        <dialog id="modal1">
+                            <h2>Aquecimento Global</h2>
+                            <p>O aquecimento global é um dos maiores vilões da destruição dos recifes de corais. Ele eleva a temperatura dos oceanos, e os corais, que são extremamente sensíveis, não suportam esse calor extra. Quando a água fica quente demais, os corais entram em estado de estresse e expulsam as microalgas (zooxantelas) que vivem dentro deles e fornecem alimento e cor. O resultado? Branqueamento dos corais, um processo que os deixa fracos, vulneráveis e, muitas vezes, leva à morte.
+
+                                Além disso, o aumento do CO₂ na atmosfera causa a acidificação dos oceanos, tornando a água mais corrosiva e dificultando a formação dos esqueletos de carbonato de cálcio dos corais. Isso os torna mais frágeis e menos resistentes a impactos ambientais.
+                                
+                                Se o aquecimento global continuar no ritmo atual, os cientistas preveem que até 90% dos recifes podem desaparecer até 2050. Isso não só ameaça a biodiversidade marinha, mas também compromete comunidades costeiras que dependem dos recifes para turismo, pesca e proteção contra tempestades</p>
+                            <button class="modal-close">Fechar</button>
+                        </dialog>
+                    </div>
+                </div>
+
+                <!-- Card 2: Poluição dos Mares -->
+                <div class="extincao-card">
+                    <div class="extincao-icon">
+                        <img src="images/poluicao-da-agualklklk.png" alt="Poluição dos Mares">
+                    </div>
+                    <div class="extincao-content">
+                        <h3>Poluição dos Mares</h3>
+                        <ul>
+                            <li>Derramamento de petróleo.</li>
+                            <li>Produtos tóxicos.</li>
+                            <li>Impacto irreversível.</li>
+                        </ul>
+                        <button class="button-saiba-mais" data-modal="modal4">Saiba Mais</button>
+                        <dialog id="modal4">
+                            <h2>Poluição dos Mares</h2>
+                            <p>A poluição dos mares é um dos maiores inimigos dos recifes de corais, atacando-os de diversas formas e acelerando sua destruição. Aqui estão os principais impactos: <br>
+
+                                1. Plásticos e Microplásticos
+                                O lixo plástico nos oceanos pode sufocar os corais, impedir a entrada de luz e até espalhar doenças. Microplásticos também são ingeridos pelos corais, prejudicando sua saúde e crescimento. <br>
+                                
+                                2. Produtos Químicos e Poluentes Industriais
+                                Substâncias tóxicas vindas de esgotos, agrotóxicos e indústrias podem envenenar os corais e afetar as microalgas que vivem dentro deles, essenciais para sua sobrevivência.</p>
+                            <button class="modal-close">Fechar</button>
+                        </dialog>
+                    </div>
+                </div>
+
+                <!-- Card 3: Pesca Predatória -->
+                <div class="extincao-card">
+                    <div class="extincao-icon">
+                        <img src="images/peixepredado.png" alt="Pesca Predatória">
+                    </div>
+                    <div class="extincao-content">
+                        <h3>Pesca Predatória</h3>
+                        <ul>
+                            <li>Uso de explosivos.</li>
+                            <li>Redes de arrasto.</li>
+                            <li>Redução de espécies-chave.</li>
+                        </ul>
+                        <button class="button-saiba-mais" data-modal="modal5">Saiba Mais</button>
+                        <dialog id="modal5">
+                            <h2>Pesca Predatoria</h2>
+                            <p>Técnicas destrutivas, como pesca com explosivos ou cianeto, destroem corais diretamente, eliminando habitats inteiros.
+
+                                Se não agirmos rápido para reduzir a poluição, os corais podem desaparecer em poucas décadas, levando consigo milhares de espécies e afetando milhões de pessoas que dependem deles para sobrevivência.</p>
+                            <button class="modal-close">Fechar</button>
+                        </dialog>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tipos-corais" id="tipos-de-corais">
+            <div class="container-titulos">
+                <h2 class="titulo-seção">Tipos de corais</h2>
+            </div>
+
+            <div class="container swiper">
+                <div class="card-local">
+                    <ul class="card-lista swiper-wrapper">
+                        <li class="card-item swiper-slide">
+                            <div class="card-link">
+                                <img src="images/Brain_coral.jpg" alt="Card Imagem" class="card-imagem">
+                                <h2 class="card-titulo">Corais Pétreos</h2>
+                                <h3 class="card-texto">Os corais pétreos desempenham um papel crucial como base dos
+                                    recifes.
+                                    Formados por milhares de pólipos que extraem cálcio da água do mar, eles criam uma
+                                    estrutura mineral sólida que serve como suporte esquelético. Esses corais podem
+                                    viver
+                                    por décadas e estão presentes em todos os oceanos.
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <div class="card-link">
+                                <img src="images/xenia-pulsante.webp" alt="Card Imagem" class="card-imagem">
+                                <h2 class="card-titulo">Corais Moles</h2>
+                                <h3 class="card-texto">Os corais moles, que se assemelham a plantas e árvores, habitam
+                                    águas
+                                    ricas em nutrientes e com luz menos intensa. Ao contrário dos corais pétreos, eles
+                                    não
+                                    têm um esqueleto rígido, o que os torna macios e flexíveis. Esses corais são também
+                                    chamados de hermatípicos.
+
+                                </h3>
+                            </div>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <div class="card-link">
+                                <img src="images/recifes-corais-sao-ecossistemas-marinhos-que-abrigam-uma-grande-quantidade-especies-5be56fbba28bf.webp"
+                                    alt="Card Imagem" class="card-imagem">
+                                <h2 class="card-titulo">Corais de Profundidade</h2>
+                                <h3 class="card-texto">Os corais de águas profundas habitam áreas escuras, a até 6.000
+                                    metros de profundidade, em águas geladas e com pouca ou nenhuma luz solar, o que
+                                    permite
+                                    seu crescimento em diversas regiões do mundo. Sua diversidade é impressionante, com
+                                    um
+                                    número quase igual de espécies em comparação com os corais de águas rasas. </h3>
+                            </div>
+                        </li>
+                        <li class="card-item swiper-slide">
+                            <div class="card-link">
+                                <img src="images/coral-vermelho-mar-768x512.jpg" alt="Card Imagem" class="card-imagem">
+                                <h2 class="card-titulo">Corais de Fogo</h2>
+                                <h3 class="card-texto">Também chamados de Milleporas, os corais negros representam o
+                                    único
+                                    gênero de coral da família Milleporidae. Está no grupo dos falsos corais duros ou
+                                    hidrozoários. Esse coral tem uma fase de pólipo e uma fase de água-viva</h3>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ongs" id="ongs">
+            <div class="title">
+                <h2>Entidades protetoras dos corais</h2>
+            </div>
+
+            <div class="container-grids">
+                <div class="ongs-item">
+                    <div class="ong-img">
+                        <div>
+                            <img src="images/IconCoralVivo.png" alt="logo da ONG coral vivo">
+                            <p class="titulo-logos">Coral Vivo</p>
+                        </div>
+                        <a href="https://coralvivo.org.br/quem-somos/" target="_blank">Conheça Mais</a>
+                    </div>
+                    <div class="ong-text">
+                        <p>Coral Vivo, é uma ong focada em conservação dos animais marinhos, atuando desde
+                            2003. Focando em estudos de formação e renovação de comunidades coralíneas. É
+                            uma referência nacional e internacional na pesquisa e defesa da costa coralínea
+                            do Brasil.</p>
+                    </div>
+                </div>
+
+                <div class="ongs-item">
+                    <div class="ong-img">
+                        <div>
+                            <img src="images/IconInstituto.png" alt="logo do Instituo Coral Vivo" />
+                            <p class="titulo-logos">Instituto Coral Vivo</p>
+                        </div>
+                        <a href="https://institutocoralvivo.org.br" target="_blank">Conheça Mais</a>
+                    </div>
+                    <div class="ong-text">
+                        <p>Sua missão é contribuir para a conservação ambiental, com foco nos ambientes
+                            marinhos e coralíneos. Fundado em 2013, com sede em Santa Cruz Cabrália, BA, a
+                            principal iniciativa do instituto é o Projeto Coral Vivo, um dos maiores e mais
+                            importantes projetos de conservação marinha da história brasileira.</p>
+                    </div>
+                </div>
+
+                <div class="ongs-item">
+                    <div class="ong-img">
+                        <div>
+                            <img src="images/IconCoralReef.png" alt="logo da ONF coral reef" />
+
+                            <p class="titulo-logos">Coral Reef Aliance</p>
+                        </div>
+                        <a href="https://coral.org/en/" target="_blank">Conheça Mais</a>
+                    </div>
+                    <div class="ong-text">
+                        <p>Como uma das maiores ONGs globais focadas exclusivamente na proteção dos recifes
+                            de corais, a Coral Reef Alliance (CORAL) tem utilizado ciência de ponta e
+                            engajamento comunitário por quase 30 anos para reduzir ameaças diretas aos
+                            recifes e promover soluções escaláveis e eficazes para sua proteção. </p>
+                    </div>
+                </div>
+
+                <div class="ongs-item">
+                    <div class="ong-img">
+                        <div>
+                            <img src="images/IconCCPR.png" alt="logo da ONG CCP" />
+                            <p class="titulo-logos">Coral Reef & Rainforest  Conservation Project</p>
+                        </div>
+                        <a href="https://coralreefandrainforestconservationproject.org/?gad_source=1&gclid=CjwKCAiAiOa9BhBqEiwABCdG8_TTrhu7Wvjys0H97YQ0wkfy8H235tJ5qbCX2waO3Vt9EFO29zEbqRoCBRsQAvD_BwE" target="_blank">Conheça Mais</a>
+                    </div>
+                    <div class="ong-text">
+                        <p>Um instituto sem fins lucrativos que é focada na proteção de ecossistemas-chave que abrigam uma biodiversidade rica e ameaçada por meio de pesquisa, educação experiencial, capacitação e projetos sustentáveis com comunidades afetadas pela perda da vida selvagem.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo-3.png" alt="Logo Respira Coral">
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Respira Coral. Todos os direitos reservados.</p>
+                <p>Projeto dedicado à preservação dos recifes de corais.</p>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#curiosidades">Curiosidades</a></li>
+                    <li><a href="#extincaofundo">Extinção</a></li>
+                    <li><a href="#tipos-de-corais">Tipos de Corais</a></li>
+                    <li><a href="#ongs">ONGs</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+                <a href="#" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+                <a href="#" target="_blank"><img src="images/xlogo.jpg" alt="Twitter"></a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
